@@ -1,0 +1,33 @@
+<h1>this is my custom</h1>
+
+
+
+{% schema %}
+  {
+    "name": "Custom Section",
+    "class": "custom-section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "custom-section-img",
+            "label": "Custom Section Image"
+        },
+        {
+            "type": "color",
+            "id": "custom-section-text-color",
+            "label": "Custom Section Text Color"
+        },
+        {
+            "type": "richtext",
+            "id": "custom-section-text",
+            "label": "Custom Section Writing"
+        }
+    ]
+  },
+  {
+    "presets": [
+        "category": "Custom Section",
+        "name": "Custom Section"
+    ]
+  }
+{% endschema %}
