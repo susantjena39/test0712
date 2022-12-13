@@ -1,6 +1,26 @@
-<h1>this is my custom</h1>
+{% if section.settings.custom-section-img %}
+    {% capture bg-img %}
+        {{ section.settings.custom-section-img }}
+    {% endcapture %}
+{% endif %}
+{% capture custom-section-txt-color %}
+    {{ section.settings.custom-section-text-color }}
+{% endcapture %}
+{% capture custom-section-text %}
+    {{section.settings.custom-section-text}}
+{% endcapture %}
 
+<div class="custom-section">
+    {{custom-section-text}}
+</div>
 
+{% stylesheet %}
+  .custom-section{
+    background-image: url('{{bgImg}}'');
+    background-size: cover;
+    color: {{custom-section-txt-color}};
+  }
+{% endstylesheet %}
 
 {% schema %}
   {
