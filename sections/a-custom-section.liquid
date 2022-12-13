@@ -1,6 +1,6 @@
 {% if section.settings.custom-section-img %}
     {% capture bgImg %}
-        {{ section.settings.custom-section-img }}
+        {{ section.settings.custom-section-img | img_url: 'master' }}
     {% endcapture %}
 {% endif %}
 {% capture custom-section-txt-color %}
